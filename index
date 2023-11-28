@@ -1,0 +1,7 @@
+fs = 1000;              % Sampling frequency
+t = 0:1/fs:1;            % Time vector
+f1 = 50;                 % Frequency of the signal
+x = cos(2*pi*f1*t);      % Signal
+y = fft(x);              % FFT
+f = (0:length(y)-1)*fs/length(y);  % Frequency vector
+plot(f, abs(y));
